@@ -415,7 +415,7 @@ function append_Yelp_Data_To_Dom( obj ){
             let rating =  $("<p>").text("Rating " + obj[storeType[categoryIndex]][i].businesses_Rating);
             let reviewCount =  $("<p>").text("reviews "+ obj[storeType[categoryIndex]][i].businesses_Review_count);
             let yelp_data_content = $("<div>");
-            yelp_data_content.addClass('yelp').append(name,image,rating,distance,reviewCount);
+            yelp_data_content.addClass('yelp').append(name,image,rating,reviewCount);
             $('.info-1').append(yelp_data_content);
         }
     }
