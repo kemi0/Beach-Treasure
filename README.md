@@ -4,7 +4,7 @@ Hackathon project involving the combination of JavaScript and JQuery along with 
 
   
 ### Team 
-- Beach Treasure Dev Team
+- Laguna Matata Dev Team
   - "Jean Paul"
   - "Sam"
   - "Andrew"
