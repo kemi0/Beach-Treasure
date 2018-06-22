@@ -143,6 +143,10 @@ function appendWeatherInfoToDom (obj){
     $('.weather').append(currentTemp, currentWeatherSummary, feelsLikeTemp, humidity,  dailyLowTemp, dailyHighTemp, sunriseTime, sunsetTime);
 }
 
+function initMapWhenReady(){
+    $(document).ready(initMap);
+}
+
 function initMap() {
     var lagunaCenter = {lat:33.522759, lng: -117.763314};
     map = new google.maps.Map(document.getElementById('map-container'), {
@@ -378,7 +382,10 @@ function yelpRatingandPictures(beachObject, type) {
 
 function yelpObjectConstructor(yelpData, type, beach){
     var storeObjectArray = [];
-    for(storeIndex = 0; storeIndex < yelpData.businesses.length; storeIndex++) {
+    if (!yelpData.businesses){
+        return yelpRatingandPictures(beach, type);
+    }
+    for(var storeIndex = 0; storeIndex < yelpData.businesses.length; storeIndex++) {
         let businesses_Name = yelpData.businesses[storeIndex].name;
         let businesses_Img = yelpData.businesses[storeIndex].image_url;
         let businesses_Rating = yelpData.businesses[storeIndex].rating;
