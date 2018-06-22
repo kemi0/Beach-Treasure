@@ -9,6 +9,9 @@ body {
     width: 100vw;
     background-color: #275D87;
     margin: 0;
+   
+}
+div .weather>p{
     color: #B6C3CB;
 }
 
@@ -30,12 +33,13 @@ body {
     letter-spacing: 1rem;
     text-shadow: 2px 2px black;
     margin-right: 2vw;
-    font-size: 5vh;
+    font-size: 6vh;
     font-family: 'Pacifico', cursive;
 }
 .header-container{
     display: inline-flex;
     width: 100%;
+    height: 26vh;
 }
 header {
     display: flex;
@@ -49,8 +53,9 @@ header {
 
 .logo-text{
     width: 67%;
-    height: 50%;
-    float: left;
+    padding-top: 3vh;
+    /* height: 50%;
+    float: left; */
    
 }
 .img{
@@ -143,7 +148,21 @@ footer{
 .beachName {
     font-size: 150%;
     text-align: center;
+    letter-spacing: 1vh;
     font-family: 'Pacifico', cursive;
+}
+.beach_rating{
+    text-align: center;
+    font-size: 3vh;
+}
+.beach_rating{
+    font-size: 1rem;
+    
+    
+}
+.beach_review{
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .reviewText .reviewRating{
@@ -161,7 +180,7 @@ footer{
     background-color: #338C81;
     opacity: 0.8;
     padding: 10px;
-    box-shadow: 1px 1px 10px;
+    box-shadow: 5px 7px 10px;
     text-align: center;
     line-height: 3vh;
 }
@@ -191,8 +210,8 @@ footer{
 .yelp_img {
     float:left;
     object-fit: contain;
-    width: 50%;
-    height: 50%;
+    width: 39%;
+    height: 66%;
 }
 
 .yelp {
@@ -250,15 +269,20 @@ footer{
          font-size: 125%;
          height: 20%;
      }
+     .text-title{
+         font-size: 1rem;
+     }
  }
 
 @media only screen and (min-width: 600px) {
+    .weather > p:first-child {
+        font-size: 1rem;
+    }
+    
     .current > p, .sunrise-sunset > p, .high-low > p, .weather > p, .reviewText {
-        font-size: 75%;
+        font-size: 1rem;
         margin: 2%;
     }
-    .weather > p:first-child {
-        font-size: 300%;
-    }
+    
 }
 
