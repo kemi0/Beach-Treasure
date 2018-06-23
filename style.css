@@ -80,7 +80,7 @@ footer{
     margin-bottom: 1.5%;
 }
 .info-container {
-    display: inline-block;
+    display: flex;
     height: 100%;
     width: 100%;
     background-color: #B6C3CB;
@@ -112,11 +112,11 @@ footer{
 }
 
 .picture {
-    height: 40%;
-    width: 40%;
+    height: 33%;
+    width: 33%;
     position: absolute;
-    top: 5%;
-    right: 5%;
+    top: 2%;
+    right: 2%;
     background-color: #338C81;
     background-size: contain;
     background-repeat: no-repeat;
@@ -125,7 +125,7 @@ footer{
 }
 
 .image {
-    height: 90%;
+    height: 93%;
     margin: 2%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -134,7 +134,7 @@ footer{
 .reviewTextBox {
     background-color: black ;
     opacity: 0.8;
-    max-height: 150px;
+    max-height: 201px;
     margin: 2%;
     margin-top: 5%;
     overflow: auto;
@@ -202,13 +202,17 @@ footer{
     margin: auto auto 5vh 5vw;
     background-color: #b65824;
 }
+.yelp_ratings{
+    display: inline-block;
+}
 .yelp_container>div {
     width: 9vh;
     height: 9vw;
     border: 1px solid black;
 }
 .yelp_img {
-    float:left;
+    display: inline-block;
+    vertical-align: middle;
     object-fit: contain;
     width: 39%;
     height: 66%;
@@ -217,7 +221,6 @@ footer{
 .yelp {
     color: black;
     text-align: center;
-    height:100%;
     width:100%;
     border-bottom: .2em dotted #6a6969;
 }
