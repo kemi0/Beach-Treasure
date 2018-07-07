@@ -6,17 +6,15 @@
 
 body {
     height: 100vh;
-    width: 100vw;
     background-color: #275D87;
     margin: 0;
-   
 }
 div .weather>p{
     color: #B6C3CB;
 }
 
 .logo-container{
-    width: 50%;
+    width: 19%;
     height: 50%;
     border-radius: 50%;
 }
@@ -32,7 +30,7 @@ div .weather>p{
     letter-spacing: 1rem;
     text-shadow: 2px 2px black;
     margin-right: 2vw;
-    font-size: 6vh;
+    font-size: 26px;
     font-family: 'Pacifico', cursive;
 }
 .header-container{
@@ -43,19 +41,15 @@ div .weather>p{
 header {
     display: flex;
     flex-direction: row;
-    height: 11vh;
+    height: 72px;
     justify-content: space-between;
     align-items: flex-start;
-    width: 100vw;
     box-sizing: border-box;
 }
 
 .logo-text{
-    width: 67%;
+    width: 81%;
     padding-top: 3vh;
-    /* height: 50%;
-    float: left; */
-   
 }
 .img{
     align-content: center;
@@ -72,11 +66,12 @@ footer{
 }
 .info-container-wrapper{
     overflow: hidden;
-    height: 83vh;
-    width: 25vw;
+    height: 100%;
+    width: 25%;
     display: inline-block;
     border-radius: 5%;
-    margin-bottom: 1.5%;
+    /* margin-bottom: 1.5%; */
+    box-sizing: border-box;
 }
 .info-container {
     display: flex;
@@ -99,8 +94,8 @@ footer{
 #wrapper {
     position: relative;
     display: inline-block;
-    height: 85vh;
-    width: 70vw;
+    height: 100%;
+    width: 73%;
     box-sizing: border-box;
 }
 
@@ -228,9 +223,10 @@ footer{
 .Name_title >p,
 .price_title >p{
     margin: 0;
+    /* font-size: 1.5rem;   */
 }
 .yelp > p:first-child{
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     font-family: 'Pacifico', cursive;
 }
 
@@ -245,8 +241,11 @@ footer{
 
 .content {
     position: absolute;
+    top: 72px;
     left: 2%;
-    bottom: 0
+    height: calc(100% - 75px);
+    min-height: 375px;
+    width: 98%;
 }
 
 ::-webkit-scrollbar{
@@ -283,9 +282,59 @@ footer{
     
     .current > p, .sunrise-sunset > p, .high-low > p, .weather > p, .reviewText {
         font-size: 1rem;
-        margin: 2%;
-        
+        margin: 2%; 
     }
-    
 }
 
+
+ @media only screen and (max-width: 440px) {
+     #logo{
+         padding-left: 1vh;
+         width: 15vh;
+         height: 92%
+     }
+     .header-container{
+         height: 28vh;
+     }
+     .content{
+        padding-top: 1vh;
+     }
+     .info-container-wrapper{
+         width: 28%
+     }
+     #wrapper{
+         width: 70%
+     }
+     .weather{
+         height: 26%;
+         width:31%;
+         bottom:10%
+     }
+     .picture{
+         height: 22%;
+         width: 45%;
+         right: 4%;
+     }
+     .reviewTextBox{
+         max-height: 23vh;
+         width: 94%;
+     }
+     .beachName{
+         font-size: 91%;
+     }
+     .beach_rating{
+         font-size: 77%;
+     }
+     .text-title{
+         font-weight: 100;
+         letter-spacing: 3px;
+         font-size: 2rem;
+     }
+
+
+ }
+ @media only screen and (max-width: 350px) {
+    .text-title{
+        font-size: 4vh;
+    }
+ }

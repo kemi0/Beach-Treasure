@@ -151,7 +151,8 @@ function initMap() {
     var lagunaCenter = {lat:33.522759, lng: -117.763314};
     map = new google.maps.Map(document.getElementById('map-container'), {
         center: lagunaCenter,
-        zoom: 13.4,
+        // use bonding box for responsiveness
+        zoom: 12.4,
         gestureHandling: "none",
         disableDefaultUI: true,
         mapTypeId: 'terrain',
@@ -293,6 +294,7 @@ function dropMarker() {
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(0, 0)
     };
+    var bounds = new google.maps.LatLngBounds();
     for(var latlngArrayIndex = 0; latlngArrayIndex < beachLongLat.length; latlngArrayIndex++) {
         var marker = new google.maps.Marker({
 
@@ -305,6 +307,7 @@ function dropMarker() {
             label: "",
             animation: google.maps.Animation.DROP,
         });
+        bounds.extend(marker.getPosition())
         var storeType = ["bar", "coffee", "food", "rental", "hotel"];
         for (typeIndex = 0; typeIndex < storeType.length; typeIndex++) {
              yelpRatingandPictures(beachesArray[latlngArrayIndex], storeType[typeIndex]);
@@ -314,6 +317,7 @@ function dropMarker() {
         markerArray.push(marker)
 
     }
+    map.fitBounds(bounds);
 }
 function clickHandler(markerClicked,beachObj,index){
     markerClicked.addListener('click', function() {
