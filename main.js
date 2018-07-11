@@ -428,7 +428,7 @@ function append_Yelp_Data_To_Dom( obj ){
             }
         }
     } else {
-       $('.info-1').append( '<h1 style="text-align: center">Business data still loading, please try again in a few seconds</h1>');
+       $('.info-1').append( '<h1 class="data-empty" style="text-align: center">Business data still loading, please try again in a few seconds.</h1>');
     } 
   
 }
