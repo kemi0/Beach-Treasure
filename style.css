@@ -259,8 +259,55 @@ footer{
     height: 1%
 }
 
+
+
+@media only screen and (max-width: 920px) {
+    #logo{
+        padding-left: 1vh;
+        width: 15vh;
+        height: 92%
+    }
+    .header-container{
+        height: 28vh;
+    }
+    .info-container-wrapper{
+        width: 28%
+    }
+    #wrapper{
+        width: 70%
+    }
+    .weather{
+        height: 26%;
+        width:31%;
+        bottom:10%
+    }
+    .picture{
+        height: 22%;
+        width: 45%;
+        right: 4%;
+    }
+    .reviewTextBox{
+        max-height: 12vh;
+        width: 94%;
+    }
+    .beachName{
+        font-size: 91%;
+    }
+    .beach_rating{
+        font-size: 77%;
+    }
+    .text-title{
+        font-weight: 100;
+        letter-spacing: 3px;
+        font-size: 2rem;
+    }
+}
  @media only screen and (max-width: 600px) {
-     .current > p, .sunrise-sunset > p, .high-low > p, .weather > p, .reviewText {
+    .current > p,
+    .sunrise-sunset > p,
+    .high-low > p, 
+    .weather > p, 
+    .reviewText {
          margin: 1%;
          padding: 1%;
          height: 10%;
@@ -271,70 +318,65 @@ footer{
          height: 20%;
      }
      .text-title{
-         font-size: 1rem;
-     }
- }
-
-@media only screen and (min-width: 600px) {
-    .weather > p:first-child {
-        font-size: 1rem;
-    }
-    
-    .current > p, .sunrise-sunset > p, .high-low > p, .weather > p, .reviewText {
-        font-size: 1rem;
-        margin: 2%; 
-    }
-}
-
-
- @media only screen and (max-width: 440px) {
-     #logo{
-         padding-left: 1vh;
-         width: 15vh;
-         height: 92%
-     }
-     .header-container{
-         height: 28vh;
-     }
-     .content{
-        padding-top: 1vh;
-     }
-     .info-container-wrapper{
-         width: 28%
-     }
-     #wrapper{
-         width: 70%
-     }
-     .weather{
-         height: 26%;
-         width:31%;
-         bottom:10%
-     }
-     .picture{
-         height: 22%;
-         width: 45%;
-         right: 4%;
-     }
-     .reviewTextBox{
-         max-height: 23vh;
-         width: 94%;
-     }
-     .beachName{
-         font-size: 91%;
-     }
-     .beach_rating{
-         font-size: 77%;
-     }
-     .text-title{
-         font-weight: 100;
-         letter-spacing: 3px;
          font-size: 2rem;
      }
-
-
  }
- @media only screen and (max-width: 350px) {
+
+
+ @media only screen and (max-width: 572px) {
+    .beachName{
+        letter-spacing: 2px;
+    }
+    #logo{
+        padding-left: 2vh;
+        width: 12vh;
+        height: 92%
+    }
     .text-title{
         font-size: 4vh;
     }
  }
+
+ @media only screen and (max-width: 330px) {
+    .text-title{
+        font-size: 5vh;
+    }
+    .yelp >p,
+    .Name_title >p,
+    .price_title >p{
+        font-size: 0.8rem;
+    }
+    .yelp_img{
+        width: 65%
+    }
+    .yelp_ratings{
+        font-size: 0.6rem;
+    }
+     .beachName{
+         letter-spacing: 2px;
+         font-size: 60%;
+     }
+     .beach_rating{
+         font-size: 40%;
+     }
+     .weather{
+        height: 23%;
+        width: 34%;
+        bottom: 10%
+     }
+ }
+ @media only screen and (min-width: 1920px){
+    #logo{
+        padding: 7%;
+        width: 22vh
+    }
+    .text-title{
+        font-size:7vh;
+ }
+ .content{
+     top:15%;
+     bottom: 1%;
+     height: calc(100% - 17%);
+     width:98%
+ }
+}
