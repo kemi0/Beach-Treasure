@@ -412,21 +412,25 @@ function yelpObjectConstructor(yelpData, type, beach){
 function append_Yelp_Data_To_Dom( obj ){
     $(".info-1").empty();
     var storeType = ["bar", "coffee", "food", "rental", "hotel"];
-    for (var categoryIndex = 0; categoryIndex < 5; categoryIndex++) {
-        for (var i = 0; i < 5; i++) {
-            let name = $("<p>").text(obj[storeType[categoryIndex]][i].businesses_Name);
-            let image = $("<img/>").attr('src', obj[storeType[categoryIndex]][i].businesses_Img);
-            image.addClass('yelp_img');
-            let rating =  $("<p>").text("Rating " + obj[storeType[categoryIndex]][i].businesses_Rating);
-            let reviewCount =  $("<p>").text("reviews "+ obj[storeType[categoryIndex]][i].businesses_Review_count);
-            let reviewContainer = $("<div>").append(rating, reviewCount);
-            reviewContainer.addClass('yelp_ratings');
-            let yelp_data_content = $("<div>");
-            yelp_data_content.addClass('yelp').append(name,image,reviewContainer);
-            $('.info-1').append(yelp_data_content);
+    if(obj.bar && obj.coffee && obj.food && obj.rental && obj.hotel){
+        for (var categoryIndex = 0; categoryIndex < 5; categoryIndex++) {
+            for (var i = 0; i < 5; i++) {
+                let name = $("<p>").text(obj[storeType[categoryIndex]][i].businesses_Name);
+                let image = $("<img/>").attr('src', obj[storeType[categoryIndex]][i].businesses_Img);
+                image.addClass('yelp_img');
+                let rating =  $("<p>").text("Rating " + obj[storeType[categoryIndex]][i].businesses_Rating);
+                let reviewCount =  $("<p>").text("reviews "+ obj[storeType[categoryIndex]][i].businesses_Review_count);
+                let reviewContainer = $("<div>").append(rating, reviewCount);
+                reviewContainer.addClass('yelp_ratings');
+                let yelp_data_content = $("<div>");
+                yelp_data_content.addClass('yelp').append(name,image,reviewContainer);
+                $('.info-1').append(yelp_data_content);
+            }
         }
-    }
-
+    } else {
+       $('.info-1').append( '<h1 style="text-align: center">Business data still loading, please try again in a few seconds</h1>');
+    } 
+  
 }
 
 function scrolling() {
