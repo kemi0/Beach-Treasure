@@ -256,7 +256,7 @@ footer{
     height: 1%
 }
 .data-empty{
-    font-size: 1rem;
+    font-size: 90%;
     margin-top: 5%;
 }
 
@@ -327,8 +327,7 @@ footer{
     }
     #logo{
         padding-left: 15%;
-        width: 12vh;
-        height: 92%
+        height: 80%;
     }
     .text-title{
         font-size: 4vh;
