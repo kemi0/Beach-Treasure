@@ -69,8 +69,8 @@ footer{
     width: 25%;
     display: inline-block;
     border-radius: 5%;
-    /* margin-bottom: 1.5%; */
     box-sizing: border-box;
+    vertical-align: top;
 }
 .info-container {
     display: flex;
